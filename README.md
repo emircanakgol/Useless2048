@@ -1,5 +1,5 @@
 # Useless2048
-A physics based 2048 game that sometimes, may become annoying 😄
+A physics based 2048 game that sometimes, becomes annoying 😄
 
 ### Challenge against unstable physics!
 As for the main challenge of the game, expect lots of block misplacements and bugs. If you still can score 2048, you are the one!
