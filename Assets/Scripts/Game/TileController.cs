@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using Game;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -113,7 +114,7 @@ public class TileController : MonoBehaviour
         canSwipe = false;
         foreach(Tile tile in tiles){
             tile.GetComponent<Rigidbody>().AddForce(Vector3.left * dragSpeed, ForceMode.Impulse);
-            tile.SwipeDirection = Vector3.left;
+            tile.swipeDirection = Vector3.left;
         }
         if(waitNewTileCoroutine != null)
             StopCoroutine(waitNewTileCoroutine);
@@ -124,7 +125,7 @@ public class TileController : MonoBehaviour
         canSwipe = false;
         foreach(Tile tile in tiles){
             tile.GetComponent<Rigidbody>().AddForce(Vector3.right * dragSpeed, ForceMode.Impulse);
-            tile.SwipeDirection = Vector3.right;
+            tile.swipeDirection = Vector3.right;
         }
         if(waitNewTileCoroutine != null)
             StopCoroutine(waitNewTileCoroutine);
@@ -135,7 +136,7 @@ public class TileController : MonoBehaviour
         canSwipe = false;
         foreach(Tile tile in tiles){
             tile.GetComponent<Rigidbody>().AddForce(Vector3.forward * dragSpeed, ForceMode.Impulse);
-            tile.SwipeDirection = Vector3.forward;
+            tile.swipeDirection = Vector3.forward;
         }
         if(waitNewTileCoroutine != null)
             StopCoroutine(waitNewTileCoroutine);
@@ -146,7 +147,7 @@ public class TileController : MonoBehaviour
         canSwipe = false;
         foreach(Tile tile in tiles){
             tile.GetComponent<Rigidbody>().AddForce(Vector3.back * dragSpeed, ForceMode.Impulse);
-            tile.SwipeDirection = Vector3.back;
+            tile.swipeDirection = Vector3.back;
         }
         if(waitNewTileCoroutine != null)
             StopCoroutine(waitNewTileCoroutine);
